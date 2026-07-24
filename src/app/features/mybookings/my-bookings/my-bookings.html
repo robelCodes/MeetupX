@@ -1,0 +1,88 @@
+@if (loading()) {
+  <app-spinner></app-spinner>
+} @else {
+  <div class="container" style="padding: 2rem 1.5rem 4rem;">
+    <h1 class="mb-1" style="font-family: var(--font-serif); font-size: 2rem;">My Bookings</h1>
+    <p class="text-muted mb-3">{{ upcomingCount() }} upcoming · {{ cancelledCount() }} cancelled</p>
+
+    <div class="pill-group mb-3">
+      <button
+        type="button"
+        class="filter-pill"
+        [class.active]="activeFilter() === 'upcoming'"
+        (click)="setFilter('upcoming')"
+      >
+        Upcoming
+      </button>
+      <button
+        type="button"
+        class="filter-pill"
+        [class.active]="activeFilter() === 'past'"
+        (click)="setFilter('past')"
+      >
+        Past
+      </button>
+    </div>
+
+    @if (visibleBookings().length === 0) {
+      <div class="empty-state">
+        <h3>No bookings yet</h3>
+        <p class="text-muted">
+          @if (activeFilter() === 'upcoming') {
+            You don't have any upcoming bookings.
+          } @else {
+            You don't have any past bookings.
+          }
+        </p>
+        <a routerLink="/" class="btn btn-primary mt-2">Browse Events</a>
+      </div>
+    } @else {
+      <div class="flex-col gap-2">
+        @for (booking of visibleBookings(); track booking.id) {
+          <div class="card booking-card">
+            <div class="booking-card-main">
+              <div class="flex gap-2 mb-1">
+                <span class="status-pill"
+                  [class.status-upcoming]="booking.status !== 'cancelled'"
+                  [class.status-cancelled]="booking.status === 'cancelled'"
+                >
+                  {{ booking.status === 'cancelled' ? 'Cancelled' : (activeFilter() === 'upcoming' ? 'Upcoming' : 'Past') }}
+                </span>
+                <span class="text-muted text-sm">#{{ booking.referenceNumber }}</span>
+              </div>
+
+              <h3 class="card-title">{{ booking.eventTitle }}</h3>
+
+              <div class="card-meta">
+                📅 {{ booking.eventDate | date:'MMM d, y' }}
+                · 🎟 {{ totalTicketCount(booking) }} ticket(s)
+                · Booked {{ booking.bookingDate | date:'MMM d, y' }}
+              </div>
+            </div>
+
+            <div class="booking-card-side">
+              <span class="price">${{ booking.totalAmount }}</span>
+              <span class="text-muted text-sm">total paid</span>
+
+              @if (booking.status !== 'cancelled' && isUpcoming(booking)) {
+                <button type="button" class="btn btn-danger btn-sm mt-2" (click)="requestCancel(booking)">
+                  Cancel
+                </button>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+}
+
+@if (bookingPendingCancel(); as booking) {
+  <app-confirm-dialog
+    title="Cancel this booking?"
+    [message]="'This will cancel your booking for ' + booking.eventTitle + '. This cannot be undone.'"
+    confirmLabel="Yes, cancel booking"
+    (confirmed)="confirmCancel()"
+    (cancelled)="dismissCancelDialog()"
+  ></app-confirm-dialog>
+}

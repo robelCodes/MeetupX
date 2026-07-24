@@ -1,0 +1,19 @@
+<div class="ticket-list">
+  @for (ticket of ticketTypes(); track ticket.id) {
+    <div class="summary-panel ticket-row">
+      <div>
+        <p class="card-title" style="font-size: 1rem; margin-bottom: .25rem;">{{ ticket.name }}</p>
+        <p class="text-muted text-sm">${{ ticket.price }} · {{ ticket.available }} available</p>
+      </div>
+
+      <div class="stepper">
+        <button type="button" (click)="decrement(ticket.id, quantities()[ticket.id] || 0)">−</button>
+        <span class="count">{{ quantities()[ticket.id] || 0 }}</span>
+        <button
+          type="button"
+          (click)="increment(ticket.id, quantities()[ticket.id] || 0, ticket.available)"
+        >+</button>
+      </div>
+    </div>
+  }
+</div>

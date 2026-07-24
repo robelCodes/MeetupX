@@ -1,0 +1,13 @@
+<div class="modal-overlay" (click)="cancelled.emit()">
+  <div class="modal-panel" (click)="$event.stopPropagation()">
+    <h3 class="mb-1">{{ title() }}</h3>
+    <p class="text-muted mb-3">{{ message() }}</p>
+
+    <div class="flex gap-2">
+      <button type="button" class="btn" (click)="cancelled.emit()">Never mind</button>
+      <button type="button" class="btn btn-danger btn-block" (click)="confirmed.emit()">
+        {{ confirmLabel() }}
+      </button>
+    </div>
+  </div>
+</div>

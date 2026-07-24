@@ -239,7 +239,7 @@
         }
       ],
       "totalAmount": 198,
-      "status": "confirmed",
+      "status": "cancelled",
       "bookingDate": "2026-07-01",
       "referenceNumber": "BK100001"
     },
@@ -417,6 +417,86 @@
       "status": "pending",
       "bookingDate": "2026-07-25",
       "referenceNumber": "BK100008"
+    },
+    {
+      "userId": "user1",
+      "eventId": "1",
+      "eventTitle": "Angular Conference 2026",
+      "eventDate": "2026-08-15",
+      "tickets": [
+        {
+          "type": "General",
+          "quantity": 2,
+          "price": 99
+        }
+      ],
+      "attendees": [
+        {
+          "name": "Robel",
+          "email": "robel@gmail.com",
+          "phone": "123456723424"
+        },
+        {
+          "name": "Isaias",
+          "email": "isaias@gmail.com",
+          "phone": "1234567890"
+        }
+      ],
+      "totalAmount": 198,
+      "status": "confirmed",
+      "bookingDate": "2026-07-24",
+      "referenceNumber": "BKYZAN5N",
+      "id": "UeP-gil"
+    },
+    {
+      "userId": "user1",
+      "eventId": "1",
+      "eventTitle": "Angular Conference 2026",
+      "eventDate": "2026-08-15",
+      "tickets": [
+        {
+          "type": "VIP",
+          "quantity": 1,
+          "price": 299
+        }
+      ],
+      "attendees": [
+        {
+          "name": "Berhe",
+          "email": "berhe@gmail.com",
+          "phone": "1234567890"
+        }
+      ],
+      "totalAmount": 299,
+      "status": "confirmed",
+      "bookingDate": "2026-07-24",
+      "referenceNumber": "BKKXIPMD",
+      "id": "nx_e085"
+    },
+    {
+      "userId": "user1",
+      "eventId": "1",
+      "eventTitle": "Angular Conference 2026",
+      "eventDate": "2026-08-15",
+      "tickets": [
+        {
+          "type": "General",
+          "quantity": 1,
+          "price": 99
+        }
+      ],
+      "attendees": [
+        {
+          "name": "Rob",
+          "email": "rob@gmail.com",
+          "phone": "1234563134566"
+        }
+      ],
+      "totalAmount": 99,
+      "status": "confirmed",
+      "bookingDate": "2026-07-24",
+      "referenceNumber": "BKJXAS96",
+      "id": "oN5z_Q6"
     }
   ]
 }
