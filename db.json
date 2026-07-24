@@ -1,37 +1,422 @@
 {
-"events": [
-{
-"id": "1",
-"title": "Angular Conference 2025",
-"description": "Annual Angular developers conference",
-"category": "Technology",
-"date": "2025-07-15",
-"time": "09:00 AM",
-"location": "Toronto, ON",
-"venue": "Convention Centre",
-"image": "https://via.placeholder.com/400x200",
-"organizerName": "Tech Events Inc",
-"ticketTypes": [
-{ "id": "1", "name": "General", "price": 99, "available": 100 },
-{ "id": "2", "name": "VIP", "price": 299, "available": 20 }
-]
-}
-],
-"bookings": [
-{
-"id": "1",
-"userId": "user1",
-"eventId": "1",
-"eventTitle": "Angular Conference 2025",
-"eventDate": "2025-07-15",
-"tickets": [{ "type": "General", "quantity": 2, "price": 99 }],
-"attendees": [
-{ "name": "John Doe", "email": "john@example.com", "phone": "1234567890" }
-],
-"totalAmount": 198,
-"status": "confirmed",
-"bookingDate": "2025-02-01",
-"referenceNumber": "BK123456"
-}
-]
+  "events": [
+    {
+      "id": "1",
+      "title": "Angular Conference 2026",
+      "description": "Annual Angular developers conference.",
+      "category": "Technology",
+      "date": "2026-08-15",
+      "time": "09:00 AM",
+      "location": "Toronto, ON",
+      "venue": "Metro Toronto Convention Centre",
+      "image": "https://picsum.photos/400/200?random=1",
+      "organizerName": "Tech Events Inc",
+      "ticketTypes": [
+        {
+          "id": "1",
+          "name": "General",
+          "price": 99,
+          "available": 150
+        },
+        {
+          "id": "2",
+          "name": "VIP",
+          "price": 299,
+          "available": 30
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "React Summit",
+      "description": "Learn the latest React ecosystem.",
+      "category": "Technology",
+      "date": "2026-09-12",
+      "time": "10:00 AM",
+      "location": "Mississauga, ON",
+      "venue": "Living Arts Centre",
+      "image": "https://picsum.photos/400/200?random=2",
+      "organizerName": "Frontend Canada",
+      "ticketTypes": [
+        {
+          "id": "1",
+          "name": "Standard",
+          "price": 89,
+          "available": 180
+        },
+        {
+          "id": "2",
+          "name": "Premium",
+          "price": 199,
+          "available": 40
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "AI Innovation Expo",
+      "description": "Discover the future of AI.",
+      "category": "Technology",
+      "date": "2026-10-20",
+      "time": "09:30 AM",
+      "location": "Toronto, ON",
+      "venue": "Enercare Centre",
+      "image": "https://picsum.photos/400/200?random=3",
+      "organizerName": "Future Labs",
+      "ticketTypes": [
+        {
+          "id": "1",
+          "name": "General",
+          "price": 120,
+          "available": 250
+        },
+        {
+          "id": "2",
+          "name": "VIP",
+          "price": 350,
+          "available": 50
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Toronto Jazz Night",
+      "description": "An evening of live jazz performances.",
+      "category": "Music",
+      "date": "2026-08-28",
+      "time": "07:00 PM",
+      "location": "Toronto, ON",
+      "venue": "Roy Thomson Hall",
+      "image": "https://picsum.photos/400/200?random=4",
+      "organizerName": "Jazz Toronto",
+      "ticketTypes": [
+        {
+          "id": "1",
+          "name": "Regular",
+          "price": 65,
+          "available": 220
+        },
+        {
+          "id": "2",
+          "name": "Front Row",
+          "price": 120,
+          "available": 35
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Startup Networking Night",
+      "description": "Meet entrepreneurs and investors.",
+      "category": "Business",
+      "date": "2026-11-05",
+      "time": "06:00 PM",
+      "location": "Toronto, ON",
+      "venue": "MaRS Discovery District",
+      "image": "https://picsum.photos/400/200?random=5",
+      "organizerName": "Startup Hub",
+      "ticketTypes": [
+        {
+          "id": "1",
+          "name": "Entry",
+          "price": 40,
+          "available": 300
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Food & Wine Festival",
+      "description": "Taste dishes from top chefs.",
+      "category": "Food",
+      "date": "2026-09-18",
+      "time": "01:00 PM",
+      "location": "Niagara, ON",
+      "venue": "Festival Grounds",
+      "image": "https://picsum.photos/400/200?random=6",
+      "organizerName": "Taste Ontario",
+      "ticketTypes": [
+        {
+          "id": "1",
+          "name": "General",
+          "price": 55,
+          "available": 400
+        },
+        {
+          "id": "2",
+          "name": "VIP",
+          "price": 140,
+          "available": 70
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Toronto Marathon",
+      "description": "Annual city marathon.",
+      "category": "Sports",
+      "date": "2026-10-05",
+      "time": "08:00 AM",
+      "location": "Toronto, ON",
+      "venue": "Nathan Phillips Square",
+      "image": "https://picsum.photos/400/200?random=7",
+      "organizerName": "Run Canada",
+      "ticketTypes": [
+        {
+          "id": "1",
+          "name": "Runner",
+          "price": 80,
+          "available": 500
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Photography Workshop",
+      "description": "Hands-on photography workshop.",
+      "category": "Education",
+      "date": "2026-09-30",
+      "time": "11:00 AM",
+      "location": "Toronto, ON",
+      "venue": "Arts Centre",
+      "image": "https://picsum.photos/400/200?random=8",
+      "organizerName": "Creative Minds",
+      "ticketTypes": [
+        {
+          "id": "1",
+          "name": "Workshop Pass",
+          "price": 75,
+          "available": 60
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Winter Art Expo",
+      "description": "Explore contemporary artwork from local and international artists.",
+      "category": "Art",
+      "date": "2026-11-22",
+      "time": "11:00 AM",
+      "location": "Toronto, ON",
+      "venue": "Art Gallery",
+      "image": "https://picsum.photos/400/200?random=9",
+      "organizerName": "Creative Arts Canada",
+      "ticketTypes": [
+        {
+          "id": "1",
+          "name": "General Admission",
+          "price": 35,
+          "available": 250
+        },
+        {
+          "id": "2",
+          "name": "VIP Guided Tour",
+          "price": 75,
+          "available": 40
+        }
+      ]
+    }
+  ],
+  "bookings": [
+    {
+      "id": "1",
+      "userId": "user1",
+      "eventId": "1",
+      "eventTitle": "Angular Conference 2026",
+      "eventDate": "2026-08-15",
+      "tickets": [
+        {
+          "type": "General",
+          "quantity": 2,
+          "price": 99
+        }
+      ],
+      "attendees": [
+        {
+          "name": "John Doe",
+          "email": "john@example.com",
+          "phone": "1234567890"
+        }
+      ],
+      "totalAmount": 198,
+      "status": "confirmed",
+      "bookingDate": "2026-07-01",
+      "referenceNumber": "BK100001"
+    },
+    {
+      "id": "2",
+      "userId": "user2",
+      "eventId": "2",
+      "eventTitle": "React Summit",
+      "eventDate": "2026-09-12",
+      "tickets": [
+        {
+          "type": "Premium",
+          "quantity": 1,
+          "price": 199
+        }
+      ],
+      "attendees": [
+        {
+          "name": "Sarah Brown",
+          "email": "sarah@example.com",
+          "phone": "5551112222"
+        }
+      ],
+      "totalAmount": 199,
+      "status": "confirmed",
+      "bookingDate": "2026-07-05",
+      "referenceNumber": "BK100002"
+    },
+    {
+      "id": "3",
+      "userId": "user3",
+      "eventId": "4",
+      "eventTitle": "Toronto Jazz Night",
+      "eventDate": "2026-08-28",
+      "tickets": [
+        {
+          "type": "Regular",
+          "quantity": 3,
+          "price": 65
+        }
+      ],
+      "attendees": [
+        {
+          "name": "Emily Wilson",
+          "email": "emily@example.com",
+          "phone": "5553334444"
+        }
+      ],
+      "totalAmount": 195,
+      "status": "confirmed",
+      "bookingDate": "2026-07-10",
+      "referenceNumber": "BK100003"
+    },
+    {
+      "id": "4",
+      "userId": "user4",
+      "eventId": "3",
+      "eventTitle": "AI Innovation Expo",
+      "eventDate": "2026-10-20",
+      "tickets": [
+        {
+          "type": "VIP",
+          "quantity": 2,
+          "price": 350
+        }
+      ],
+      "attendees": [
+        {
+          "name": "Michael Lee",
+          "email": "michael@example.com",
+          "phone": "5552221111"
+        }
+      ],
+      "totalAmount": 700,
+      "status": "pending",
+      "bookingDate": "2026-07-15",
+      "referenceNumber": "BK100004"
+    },
+    {
+      "id": "5",
+      "userId": "user5",
+      "eventId": "5",
+      "eventTitle": "Startup Networking Night",
+      "eventDate": "2026-11-05",
+      "tickets": [
+        {
+          "type": "Entry",
+          "quantity": 4,
+          "price": 40
+        }
+      ],
+      "attendees": [
+        {
+          "name": "David Miller",
+          "email": "david@example.com",
+          "phone": "5558889999"
+        }
+      ],
+      "totalAmount": 160,
+      "status": "cancelled",
+      "bookingDate": "2026-07-20",
+      "referenceNumber": "BK100005"
+    },
+    {
+      "id": "6",
+      "userId": "user6",
+      "eventId": "6",
+      "eventTitle": "Food & Wine Festival",
+      "eventDate": "2026-09-18",
+      "tickets": [
+        {
+          "type": "VIP",
+          "quantity": 2,
+          "price": 140
+        }
+      ],
+      "attendees": [
+        {
+          "name": "Anna White",
+          "email": "anna@example.com",
+          "phone": "5556667777"
+        }
+      ],
+      "totalAmount": 280,
+      "status": "confirmed",
+      "bookingDate": "2026-07-21",
+      "referenceNumber": "BK100006"
+    },
+    {
+      "id": "7",
+      "userId": "user7",
+      "eventId": "7",
+      "eventTitle": "Toronto Marathon",
+      "eventDate": "2026-10-05",
+      "tickets": [
+        {
+          "type": "Runner",
+          "quantity": 1,
+          "price": 80
+        }
+      ],
+      "attendees": [
+        {
+          "name": "James Carter",
+          "email": "james@example.com",
+          "phone": "5551231234"
+        }
+      ],
+      "totalAmount": 80,
+      "status": "confirmed",
+      "bookingDate": "2026-07-22",
+      "referenceNumber": "BK100007"
+    },
+    {
+      "id": "8",
+      "userId": "user8",
+      "eventId": "8",
+      "eventTitle": "Photography Workshop",
+      "eventDate": "2026-09-30",
+      "tickets": [
+        {
+          "type": "Workshop Pass",
+          "quantity": 2,
+          "price": 75
+        }
+      ],
+      "attendees": [
+        {
+          "name": "Lisa Green",
+          "email": "lisa@example.com",
+          "phone": "5557778888"
+        }
+      ],
+      "totalAmount": 150,
+      "status": "pending",
+      "bookingDate": "2026-07-25",
+      "referenceNumber": "BK100008"
+    }
+  ]
 }

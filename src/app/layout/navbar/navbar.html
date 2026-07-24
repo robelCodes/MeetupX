@@ -1,0 +1,21 @@
+<div class="navbar">
+  <a routerLink="/" class="brand">encore</a>
+
+  <ul class="nav-menu">
+    <li>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+        Browse Events
+      </a>
+    </li>
+    <li>
+      <a routerLink="/my-bookings" routerLinkActive="active" class="nav-link">
+        My Bookings
+      </a>
+    </li>
+  </ul>
+
+  <button class="theme-toggle" (click)="themeService.toggleTheme()"
+    [attr.aria-label]="themeService.isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'">
+    {{ themeService.isDarkMode() ? "☀️" : "🌙" }}
+  </button>
+</div>

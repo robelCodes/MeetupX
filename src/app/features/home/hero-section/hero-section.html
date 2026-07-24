@@ -1,0 +1,32 @@
+<section class="search-hero">
+  <div class="search-hero-glow" aria-hidden="true"></div>
+
+  <span class="ticket-badge">
+    <span class="ticket-badge-icon">🎟</span>
+    <span class="ticket-badge-perforation"></span>
+    <span>12,000+ live events waiting</span>
+  </span>
+
+  <h1 class="search-hero-title">
+    Find Your Next
+    <span class="search-hero-accent">Encore</span>
+  </h1>
+
+  <p class="search-hero-sub">
+    From sold-out concerts to intimate workshops — book your seat before the lights go down.
+  </p>
+
+  <div class="search-bar">
+    <span class="search-icon" aria-hidden="true">🔍</span>
+    <input
+      #searchInput
+      type="text"
+      class="search-input"
+      placeholder="Search events..."
+      (input)="onSearch(searchInput.value)"
+    />
+    <button type="button" class="search-button" (click)="onSearch(searchInput.value)">
+      Search
+    </button>
+  </div>
+</section>

@@ -1,1 +1,28 @@
-<p>event-card works!</p>
+<a [routerLink]="['/events', event().id]" class="card-link-wrap">
+  <div class="card">
+    <div class="card-image-wrap">
+      <img [src]="event().image" [alt]="event().title">
+      <span class="badge badge-overlay">{{ event().category }}</span>
+    </div>
+
+    <div class="card-body">
+      <h3 class="card-title">{{ event().title }}</h3>
+
+      <div class="card-meta">
+        📅 {{ event().date | date:'MMM d, y' }} · {{ event().time }}
+      </div>
+      <div class="card-meta">
+        📍 {{ event().venue }}, {{ event().location }}
+      </div>
+
+      <div class="progress mt-2">
+        <div class="progress-bar"></div>
+      </div>
+
+      <div class="card-footer">
+        <span class="price">From ${{ lowestPrice() }}</span>
+        <span class="text-muted text-sm">{{ totalAvailable() }} available</span>
+      </div>
+    </div>
+  </div>
+</a>
