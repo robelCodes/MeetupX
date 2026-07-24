@@ -9,7 +9,7 @@
       "time": "09:00 AM",
       "location": "Toronto, ON",
       "venue": "Metro Toronto Convention Centre",
-      "image": "https://picsum.photos/400/200?random=1",
+      "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&auto=format&fit=crop&q=80",
       "organizerName": "Tech Events Inc",
       "ticketTypes": [
         {
@@ -35,7 +35,7 @@
       "time": "10:00 AM",
       "location": "Mississauga, ON",
       "venue": "Living Arts Centre",
-      "image": "https://picsum.photos/400/200?random=2",
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop&q=80",
       "organizerName": "Frontend Canada",
       "ticketTypes": [
         {
@@ -61,7 +61,7 @@
       "time": "09:30 AM",
       "location": "Toronto, ON",
       "venue": "Enercare Centre",
-      "image": "https://picsum.photos/400/200?random=3",
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&auto=format&fit=crop&q=80",
       "organizerName": "Future Labs",
       "ticketTypes": [
         {
@@ -87,7 +87,7 @@
       "time": "07:00 PM",
       "location": "Toronto, ON",
       "venue": "Roy Thomson Hall",
-      "image": "https://picsum.photos/400/200?random=4",
+      "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&auto=format&fit=crop&q=80",
       "organizerName": "Jazz Toronto",
       "ticketTypes": [
         {
@@ -113,7 +113,7 @@
       "time": "06:00 PM",
       "location": "Toronto, ON",
       "venue": "MaRS Discovery District",
-      "image": "https://picsum.photos/400/200?random=5",
+      "image": "https://images.unsplash.com/photo-1515169067868-5387ec356754?w=1200&auto=format&fit=crop&q=80",
       "organizerName": "Startup Hub",
       "ticketTypes": [
         {
@@ -133,7 +133,7 @@
       "time": "01:00 PM",
       "location": "Niagara, ON",
       "venue": "Festival Grounds",
-      "image": "https://picsum.photos/400/200?random=6",
+      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&auto=format&fit=crop&q=80",
       "organizerName": "Taste Ontario",
       "ticketTypes": [
         {
@@ -159,7 +159,7 @@
       "time": "08:00 AM",
       "location": "Toronto, ON",
       "venue": "Nathan Phillips Square",
-      "image": "https://picsum.photos/400/200?random=7",
+      "image": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1200&auto=format&fit=crop&q=80",
       "organizerName": "Run Canada",
       "ticketTypes": [
         {
@@ -179,7 +179,7 @@
       "time": "11:00 AM",
       "location": "Toronto, ON",
       "venue": "Arts Centre",
-      "image": "https://picsum.photos/400/200?random=8",
+      "image": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&auto=format&fit=crop&q=80",
       "organizerName": "Creative Minds",
       "ticketTypes": [
         {
@@ -199,7 +199,7 @@
       "time": "11:00 AM",
       "location": "Toronto, ON",
       "venue": "Art Gallery",
-      "image": "https://picsum.photos/400/200?random=9",
+      "image": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=1200&auto=format&fit=crop&q=80",
       "organizerName": "Creative Arts Canada",
       "ticketTypes": [
         {
@@ -493,7 +493,7 @@
         }
       ],
       "totalAmount": 99,
-      "status": "confirmed",
+      "status": "cancelled",
       "bookingDate": "2026-07-24",
       "referenceNumber": "BKJXAS96",
       "id": "oN5z_Q6"
