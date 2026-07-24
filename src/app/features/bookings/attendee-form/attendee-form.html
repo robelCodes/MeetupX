@@ -1,0 +1,46 @@
+<div class="attendee-list">
+  @for (attendee of attendees(); track $index; let i = $index) {
+    <div class="summary-panel">
+      <p class="filter-label mb-2">Attendee {{ i + 1 }}</p>
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input
+          type="text"
+          class="form-control"
+          [value]="attendee.name"
+          (input)="onFieldChange(i, 'name', $any($event.target).value)"
+        />
+        @if (showErrors() && isNameInvalid(attendee)) {
+          <p class="form-error">Name is required.</p>
+        }
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input
+          type="email"
+          class="form-control"
+          [value]="attendee.email"
+          (input)="onFieldChange(i, 'email', $any($event.target).value)"
+        />
+        @if (showErrors() && isEmailInvalid(attendee)) {
+          <p class="form-error">Enter a valid email address.</p>
+        }
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input
+          type="tel"
+          class="form-control"
+          [value]="attendee.phone"
+          (input)="onFieldChange(i, 'phone', $any($event.target).value)"
+        />
+        @if (showErrors() && isPhoneInvalid(attendee)) {
+          <p class="form-error">Enter a valid phone number (10+ digits).</p>
+        }
+      </div>
+    </div>
+  }
+</div>

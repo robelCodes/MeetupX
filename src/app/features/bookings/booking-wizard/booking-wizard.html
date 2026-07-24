@@ -1,0 +1,70 @@
+@if (loading()) {
+  <app-spinner></app-spinner>
+} @else if (event(); as ev) {
+  <div class="container" style="max-width: 640px; padding: 2rem 1.5rem 4rem;">
+    <div class="wizard-steps">
+      <div class="wizard-step" [class.active]="currentStep() === 1" [class.done]="currentStep() > 1">
+        <span class="step-num">1</span> Tickets
+      </div>
+      <div class="wizard-divider"></div>
+      <div class="wizard-step" [class.active]="currentStep() === 2" [class.done]="currentStep() > 2">
+        <span class="step-num">2</span> Attendees
+      </div>
+      <div class="wizard-divider"></div>
+      <div class="wizard-step" [class.active]="currentStep() === 3">
+        <span class="step-num">3</span> Confirm
+      </div>
+    </div>
+
+    @if (currentStep() === 1) {
+      <app-ticket-select
+        [ticketTypes]="ev.ticketTypes"
+        [quantities]="quantities()"
+        (quantityChanged)="onQuantityChange($event)"
+      ></app-ticket-select>
+
+      <div class="summary-row total mt-3">
+        <span>Total</span>
+        <span>${{ totalAmount() }}</span>
+      </div>
+
+      <button
+        type="button"
+        class="btn btn-primary btn-block mt-3"
+        [disabled]="!step1Valid()"
+        (click)="goToStep2()"
+      >
+        Continue
+      </button>
+    }
+
+    @if (currentStep() === 2) {
+      <app-attendee-form
+        [attendees]="attendees()"
+        [showErrors]="showAttendeeErrors()"
+        (attendeeChanged)="onAttendeeFieldChange($event)"
+      ></app-attendee-form>
+
+      <div class="flex gap-2 mt-3">
+        <button type="button" class="btn" (click)="goBack()">Back</button>
+        <button type="button" class="btn btn-primary btn-block" (click)="goToStep3()">Continue</button>
+      </div>
+    }
+
+    @if (currentStep() === 3) {
+      <app-booking-confirmation
+        [eventTitle]="ev.title"
+        [tickets]="selectedTickets()"
+        [totalAmount]="totalAmount()"
+        [submitting]="submitting()"
+        [submitted]="submitted()"
+        [referenceNumber]="referenceNumber()"
+        (confirmBooking)="confirmBooking()"
+      ></app-booking-confirmation>
+
+      @if (!submitted()) {
+        <button type="button" class="btn mt-2" (click)="goBack()">Back</button>
+      }
+    }
+  </div>
+}
