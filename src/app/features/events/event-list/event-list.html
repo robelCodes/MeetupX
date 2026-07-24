@@ -1,1 +1,29 @@
-<p>event-list works!</p>
+<app-hero-section (search)="onSearch($event)"></app-hero-section>
+
+<app-filter
+  [categories]="categories()"
+  [selectedCategory]="selectedCategory()"
+  [selectedDateRange]="selectedDateRange()"
+  [selectedPriceRange]="selectedPriceRange()"
+  [sortBy]="sortBy()"
+  (categorySelected)="onCategorySelect($event)"
+  (dateRangeSelected)="onDateRangeSelect($event)"
+  (priceRangeSelected)="onPriceRangeSelect($event)"
+  (sortChanged)="onSortChange($event)"
+></app-filter>
+
+@if (loading()) {
+  <app-spinner></app-spinner>
+} @else if (visibleEvents().length === 0) {
+  <div class="empty-state">
+    <h1>🎭</h1>
+    <h3>No events found</h3>
+    <p class="text-muted">Try a different search term or category.</p>
+  </div>
+} @else {
+  <div class="events-grid">
+    @for (event of visibleEvents(); track event.id) {
+      <app-event-card [event]="event"></app-event-card>
+    }
+  </div>
+}

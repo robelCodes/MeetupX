@@ -1,0 +1,64 @@
+<div class="filter-panel">
+  <div class="filter-row">
+    <span class="filter-label">Category</span>
+    <div class="pill-group">
+      @for (category of categories(); track category) {
+        <button
+          type="button"
+          class="filter-pill"
+          [class.active]="category === selectedCategory()"
+          (click)="categorySelected.emit(category)"
+        >
+          {{ category }}
+        </button>
+      }
+    </div>
+  </div>
+
+  <div class="filter-row filter-row-secondary">
+    <div class="filter-block">
+      <span class="filter-label">Date</span>
+      <div class="pill-group">
+        @for (range of dateRanges; track range.value) {
+          <button
+            type="button"
+            class="filter-pill"
+            [class.active]="range.value === selectedDateRange()"
+            (click)="dateRangeSelected.emit(range.value)"
+          >
+            {{ range.label }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <div class="filter-block">
+      <span class="filter-label">Price</span>
+      <div class="pill-group">
+        @for (range of priceRanges; track range.value) {
+          <button
+            type="button"
+            class="filter-pill"
+            [class.active]="range.value === selectedPriceRange()"
+            (click)="priceRangeSelected.emit(range.value)"
+          >
+            {{ range.label }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <div class="filter-block sort-block">
+      <span class="filter-label">Sort by</span>
+      <select
+        class="sort-select"
+        [value]="sortBy()"
+        (change)="onSortChange($any($event.target).value)"
+      >
+        @for (option of sortOptions; track option.value) {
+          <option [value]="option.value">{{ option.label }}</option>
+        }
+      </select>
+    </div>
+  </div>
+</div>
