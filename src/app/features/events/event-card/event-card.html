@@ -3,6 +3,16 @@
     <div class="card-image-wrap">
       <img [src]="event().image" [alt]="event().title">
       <span class="badge badge-overlay">{{ event().category }}</span>
+
+      <button
+        type="button"
+        class="favorite-btn"
+        [class.active]="isFavorited()"
+        (click)="onFavoriteClick($event)"
+        [attr.aria-label]="isFavorited() ? 'Remove from favorites' : 'Add to favorites'"
+      >
+        {{ isFavorited() ? '❤️' : '🤍' }}
+      </button>
     </div>
 
     <div class="card-body">
