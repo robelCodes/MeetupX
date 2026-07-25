@@ -1,4 +1,4 @@
-# Encore - Event Management Platform
+# meetUpX - Event Management Platform
 
 This is my Angular project for an event management platform. Users can browse events, search/filter them, book tickets, and manage their bookings. Built with standalone components (no NgModules).
 
