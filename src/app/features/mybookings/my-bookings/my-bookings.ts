@@ -11,6 +11,7 @@ import { finalize } from 'rxjs';
 
 const CURRENT_USER_ID = 'user1';
 
+
 type BookingFilter = 'upcoming' | 'past';
 
 

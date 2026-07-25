@@ -112,7 +112,7 @@ export class BookingWizard {
   }
 
   private generateReference(): string {
-    return 'BK' + Math.random().toString(36).slice(2, 8).toUpperCase();
+    return 'RF' + Math.random().toString(36).slice(2, 8).toUpperCase();
   }
 
   confirmBooking() {
